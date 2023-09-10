@@ -14,4 +14,8 @@ export class PostsService {
   create(post: PostType) {
     this.posts.push(post);
   }
+
+  findById(id: string): PostType {
+    return this.posts.find((post) => post.id === id);
+  }
 }
